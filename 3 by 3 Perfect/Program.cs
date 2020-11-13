@@ -23,7 +23,7 @@ namespace _3_by_3_Perfect
                 if (i < 10000) //run the game until I've won 5 times.
                 {
 
-                    //!Console.WriteLine("{0},{1}", x, y); //where u at
+               
 
 
 
@@ -41,12 +41,12 @@ namespace _3_by_3_Perfect
                     {
                         x = 0;
                         y = 1;
-                        //!Console.WriteLine("up ladder to 0,1");
+                        
                     }
                     //snake
                     else if (x == 0 && y == 2)
                     {
-                        //!Console.WriteLine("snake to 1,1");
+                       
                         x = 1;
                         y = 1;
                     }
@@ -56,9 +56,9 @@ namespace _3_by_3_Perfect
                     else if (x >= 0 && y == 2)
                     {
                         int Roll = diceRoll.Next(1, 4); //roll 1,2 or 3.
-                        //!Console.WriteLine("rolled {0}", Roll);
+         
                         r++;
-                        //!Console.WriteLine("Times Rolled: {0}", r); //times rolled
+
                         if (x + Roll == 1)
                         {
                             x = 1;
@@ -71,21 +71,21 @@ namespace _3_by_3_Perfect
                         else if (x + Roll == 3)//if on 0 and roll 3 or on 1 and roll 2.
                         {
                             x = 1;
-                            //!Console.WriteLine("overrolled, gone back to 1");
+                
                         }
                         else if (x + Roll == 4)//rolled extra 2.
                         {
                             x = 0;
-                            //!Console.WriteLine("Overolled, gone back to 0,2");
+  
                         }
                     }
 
                     else // for not in the last 3 spaces 
                     {
                         int Roll = diceRoll.Next(1, 4); //roll 1,2 or 3.
-                        //!Console.WriteLine("rolled {0}", Roll);
+          
                         r++;
-                        //!Console.WriteLine("Times Rolled: {0}", r); //times rolled
+               
 
                         if (y % 2 == 0 && y < 2) //if line is even and not the last line
                         {
@@ -122,7 +122,7 @@ namespace _3_by_3_Perfect
 
                         else if (y % 2 != 0 && y <= 2)
                         {
-                            //!Console.WriteLine("y is odd");
+               
                             if (x - Roll >= 0)
                             {
                                 x -= Roll;
